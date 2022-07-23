@@ -9,7 +9,37 @@
   <body>
     <main>
       <div id="app">
-        <p>{{ message }}</p>
+        <div id="navbar">   
+          <h2 style="color: white; font-family: Roboto">Joshua Sanchez</h2>
+          <button class="button" @click="switchPage('about')">About</button>
+          <button class="button" @click="switchPage('projects')" >Projects</button>
+          <button class="button" @click="switchPage('contact')" >Contact</button>
+        </div>
+        <div class="carousel">
+          <button class="prev" @click="switchPage('left')">&#10094;</button>
+          <div id="about" class="content-box fade" v-if="page === 'about'">
+            <div class="content">
+              <h3 class="text">about</h3>
+            </div>
+            <div class="">
+            </div>
+          </div>
+          <div id="projects" class="content-box fade" v-else-if="page === 'projects'">
+            <div class="content">
+              <h3 class="text">projects</h3>
+            </div>
+            <div class="">
+            </div>
+          </div>
+          <div id="contact" class="content-box fade" v-else-if="page === 'contact'">
+            <div class="content">
+              <h3 class="text">contact</h3>
+            </div>
+            <div class="">
+            </div>
+          </div>
+          <button class="next" @click="switchPage('right')">&#10095;</button>
+        </div>
       </div>
     </main>
   </body>
