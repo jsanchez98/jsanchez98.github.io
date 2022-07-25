@@ -1,5 +1,5 @@
 #app {
-    background-color: #035956;
+    background-color: #f9ffff;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -42,7 +42,7 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #FFFEF2;
+    background-color: #ffffff;
     width: 90%;
     height: 85%;
 }
@@ -59,10 +59,11 @@
 }
 
 .text {
-    height:100%;
+    height: 10%;
     width: 10%;
     margin: auto; 
     text-align: center;
+    font-family: Roboto;
 }
 
 .carousel {
@@ -78,7 +79,7 @@
     height:50px;
     transition: 0.6s ease;
     user-select: none;
-    color: white;
+    color: rgb(73, 73, 73);
     background-color: inherit;
     border: none;
     font-size: 18px;
@@ -110,4 +111,13 @@
     to {
         opacity: 1
     }
+}
+
+#geonotes {
+    position: relative;
+    width: auto;
+    height: 500px;
+    top: 20%;
+    left: 1%;
+    border-radius: 5px;
 }

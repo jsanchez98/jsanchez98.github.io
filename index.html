@@ -4,38 +4,60 @@
     <meta charset="utf-8" />
     <title>Joshua Sanchez</title>
     <script src="https://unpkg.com/vue@3"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <main>
       <div id="app">
-        <div id="navbar">   
+        <div id="navbar">
           <h2 style="color: white; font-family: Roboto">Joshua Sanchez</h2>
           <button class="button" @click="switchPage('about')">About</button>
-          <button class="button" @click="switchPage('projects')" >Projects</button>
-          <button class="button" @click="switchPage('contact')" >Contact</button>
+          <button class="button" @click="switchPage('projects')">
+            Projects
+          </button>
+          <button class="button" @click="switchPage('contact')">Contact</button>
         </div>
         <div class="carousel">
           <button class="prev" @click="switchPage('left')">&#10094;</button>
           <div id="about" class="content-box fade" v-if="page === 'about'">
             <div class="content">
-              <h3 class="text">about</h3>
+              <div style="margin: auto">
+                <h3 class="text" style="top: 10%">About Me</h3>
+                <div style="margin-top: 40%">
+                  BSc Computer Science graduate from University of Southampton
+                </div>
+              </div>
             </div>
             <div class=""></div>
           </div>
-          <div id="projects" class="content-box fade" v-else-if="page === 'projects'">
+          <div
+            id="projects"
+            class="content-box fade"
+            v-else-if="page === 'projects'"
+          >
             <div class="content">
-              <h3 class="text">projects</h3>
+              <div>
+                <h3 class="text">Projects</h3>
+                <h4>Geonotes</h4>
+                <div style="margin-top: 40%">
+                  Geonotes is geolocation-enabled web app for taking notes.
+                  Ideal for jotting down information about possible trips,
+                  planning ahead in a new city, or even on an expedition.
+                </div>
+              </div>
+              <img src="./geonotes.PNG" alt="geonotes" id="geonotes" />
             </div>
-            <div class="">
-            </div>
+            <div class=""></div>
           </div>
-          <div id="contact" class="content-box fade" v-else-if="page === 'contact'">
+          <div
+            id="contact"
+            class="content-box fade"
+            v-else-if="page === 'contact'"
+          >
             <div class="content">
-              <h3 class="text">contact</h3>
+              <h3 class="text">Contact</h3>
             </div>
-            <div class="">
-            </div>
+            <div class=""></div>
           </div>
           <button class="next" @click="switchPage('right')">&#10095;</button>
         </div>
