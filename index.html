@@ -11,11 +11,11 @@
       <div id="app">
         <div id="navbar">
           <h2 style="color: white; font-family: Roboto">Joshua Sanchez</h2>
-          <button class="button" @click="switchPage('about')">About</button>
-          <button class="button" @click="switchPage('projects')">
+          <button :class="buttonStates[0]" @click="switchPage('about')">About</button>
+          <button :class="buttonStates[1]" @click="switchPage('projects')">
             Projects
           </button>
-          <button class="button" @click="switchPage('contact')">Contact</button>
+          <button :class="buttonStates[2]" @click="switchPage('contact')">Contact</button>
         </div>
         <div class="carousel">
           <button class="prev" @click="switchPage('left')">&#10094;</button>
@@ -23,8 +23,10 @@
             <div class="content">
               <div style="margin: auto">
                 <h3 class="text" style="top: 10%">About Me</h3>
-                <div style="margin-top: 40%">
+                <div style="margin-top: 40%; text-align: center">
                   BSc Computer Science graduate from University of Southampton
+                  <br />
+                  Interested in web development, DevOps, and machine learning.
                 </div>
               </div>
             </div>
@@ -37,8 +39,8 @@
           >
             <div class="content">
               <div>
-                <h3 class="text">Projects</h3>
-                <h4>Geonotes</h4>
+                <h3 class="text"></h3>
+                <h2>Geonotes</h2>
                 <div style="margin-top: 40%">
                   Geonotes is geolocation-enabled web app for taking notes.
                   Ideal for jotting down information about possible trips,
@@ -55,7 +57,10 @@
             v-else-if="page === 'contact'"
           >
             <div class="content">
-              <h3 class="text">Contact</h3>
+              <div style="margin: auto">
+                <h3 class="text" style="top: 10%; left: 40%">Contact</h3>
+                <div style="margin-top: 40%">email: jfgs2000@gmail.com</div>
+              </div>
             </div>
             <div class=""></div>
           </div>

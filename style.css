@@ -19,7 +19,7 @@
     align-items: flex-end;
 }
 
-.button {
+.inactive {
     background-color: inherit;
     border: none;
     font-size: 20px;
@@ -31,7 +31,19 @@
     color: white;
 }
 
-.button:hover {
+.active {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    padding-bottom: 0%;
+    height:60%;
+    width: 10%;
+    font-family: Roboto;
+    transition-duration: 0.2s;
+    color:rgb(44, 55, 81)
+}
+
+.inactive:hover {
     background-color: white;
     color:rgb(44, 55, 81)
 }
@@ -60,7 +72,7 @@
 
 .text {
     height: 10%;
-    width: 10%;
+    width: auto;
     margin: auto; 
     text-align: center;
     font-family: Roboto;
@@ -73,10 +85,10 @@
 }
 
 .prev, .next {
-    margin-top: 20%;
+    margin-top: 15%;
     top: 50%;
     width: 10%;
-    height:50px;
+    height: 20%;
     transition: 0.6s ease;
     user-select: none;
     color: rgb(73, 73, 73);
