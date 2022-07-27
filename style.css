@@ -107,7 +107,7 @@
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(95, 95, 95, 0.8);
+    background-color: rgba(192, 192, 192, 0.8);
   }
 
 @font-face {
