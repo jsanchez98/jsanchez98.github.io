@@ -10,12 +10,12 @@
     <main>
       <div id="app">
         <div id="navbar">
-          <h2 style="color: white; font-family: Roboto">Joshua Sanchez</h2>
-          <button :class="buttonStates[0]" @click="switchPage('about')">About</button>
-          <button :class="buttonStates[1]" @click="switchPage('projects')">
+          <h2 style="color: white; font-family: Roboto; margin-right: auto; margin-left: 10%">Joshua Sanchez</h2>
+          <button :class="buttonStates[0]" class="button" @click="switchPage('about')">About</button>
+          <button :class="buttonStates[1]" class="button" @click="switchPage('projects')">
             Projects
           </button>
-          <button :class="buttonStates[2]" @click="switchPage('contact')">Contact</button>
+          <button :class="buttonStates[2]" class="button" @click="switchPage('contact')">Contact</button>
         </div>
         <div class="carousel">
           <button class="prev" @click="switchPage('left')">&#10094;</button>
